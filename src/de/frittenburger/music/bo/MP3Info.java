@@ -18,10 +18,37 @@
  * along with MP3-Album-Art.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package de.frittenburger.music.interfaces;
+package de.frittenburger.music.bo;
 
-public interface StringDistance {
+import java.awt.image.BufferedImage;
 
-	int calculate(CharSequence lhs, CharSequence rhs);                         
+public class MP3Info {
 
+	
+	private String artist = null;
+	private String album = null;
+	private BufferedImage image = null;
+	
+	public String getArtist() {
+		return artist;
+	}
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+	public String getAlbum() {
+		return album;
+	}
+	public void setAlbum(String album) {
+		this.album = album;
+	}
+	
+	public BufferedImage getImage() {
+		return image;
+	}
+	public void setImage(BufferedImage image) {
+		this.image = image;
+	}
+	
+	
+	
 }

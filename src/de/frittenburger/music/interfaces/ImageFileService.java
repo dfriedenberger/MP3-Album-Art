@@ -20,8 +20,15 @@
  */
 package de.frittenburger.music.interfaces;
 
-public interface StringDistance {
+import java.awt.image.BufferedImage;
+import java.io.File;
 
-	int calculate(CharSequence lhs, CharSequence rhs);                         
+import de.frittenburger.music.bo.BatchingException;
+
+public interface ImageFileService {
+
+	void write(BufferedImage img, String type, File file) throws BatchingException;
+
+	BufferedImage read(File file) throws BatchingException;
 
 }

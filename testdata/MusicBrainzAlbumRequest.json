@@ -1,0 +1,85 @@
+{
+   "created":"2018-04-05T10:24:41.042Z",
+   "count":13084,
+   "offset":0,
+   "releases":[
+      {
+         "id":"7009c093-8db9-381d-a988-9132f28c621c",
+         "score":"100",
+         "count":1,
+         "title":"Im Schatten der Ärzte",
+         "status":"Official",
+         "packaging":"Cardboard/Paper Sleeve",
+         "text-representation":{
+            "language":"deu",
+            "script":"Latn"
+         },
+         "artist-credit":[
+            {
+               "artist":{
+                  "id":"f2fb0ff0-5679-42ec-a55c-15109ce6e320",
+                  "name":"Die Ärzte",
+                  "sort-name":"Ärzte, Die",
+                  "aliases":[
+                     {
+                        "sort-name":"Ärzte",
+                        "name":"Ärzte",
+                        "locale":null,
+                        "type":"Search hint",
+                        "primary":null,
+                        "begin-date":null,
+                        "end-date":null
+                     },
+                     {
+                        "sort-name":"Die Ärtze",
+                        "name":"Die Ärtze",
+                        "locale":null,
+                        "type":"Search hint",
+                        "primary":null,
+                        "begin-date":null,
+                        "end-date":null
+                     }
+                  ]
+               }
+            }
+         ],
+         "release-group":{
+            "id":"fcee283d-f5de-3dcb-970a-0f37ae317258",
+            "primary-type":"Album"
+         },
+         "date":"1985",
+         "country":"DE",
+         "release-events":[
+            {
+               "date":"1985",
+               "area":{
+                  "id":"85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+                  "name":"Germany",
+                  "sort-name":"Germany",
+                  "iso-3166-1-codes":[
+                     "DE"
+                  ]
+               }
+            }
+         ],
+         "barcode":"",
+         "label-info":[
+            {
+               "catalog-number":"CBS 26727",
+               "label":{
+                  "id":"b8d33bec-92cc-40d9-bd92-4eb089b401a9",
+                  "name":"CBS"
+               }
+            }
+         ],
+         "track-count":13,
+         "media":[
+            {
+               "format":"12\" Vinyl",
+               "disc-count":0,
+               "track-count":13
+            }
+         ]
+      }
+   ]
+}

@@ -18,10 +18,26 @@
  * along with MP3-Album-Art.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package de.frittenburger.music.interfaces;
+package de.frittenburger.music;
 
-public interface StringDistance {
+import static org.junit.Assert.*;
 
-	int calculate(CharSequence lhs, CharSequence rhs);                         
+import org.junit.Test;
+
+import de.frittenburger.music.impl.LevenshteinDistance;
+import de.frittenburger.music.interfaces.StringDistance;
+
+public class TestLevenshteinDistance {
+
+	@Test
+	public void test() {
+		StringDistance distance = new LevenshteinDistance();
+		
+		assertEquals(0,distance.calculate("abc", "abc"));
+		assertTrue(distance.calculate("abc", "GHI") == distance.calculate("GHI", "abc"));
+		assertTrue(distance.calculate("abc", "abd") + distance.calculate("abd", "add") >= distance.calculate("abc", "add"));
+		
+
+	}
 
 }

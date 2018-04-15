@@ -18,19 +18,40 @@
  * along with MP3-Album-Art.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package de.frittenburger.music.interfaces;
+package de.frittenburger.music.impl;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.security.GeneralSecurityException;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import javax.imageio.ImageIO;
 
-public interface WebRequestService {
+import de.frittenburger.music.bo.BatchingException;
+import de.frittenburger.music.interfaces.ImageFileService;
 
-	public JsonNode getJson(String path, String[] key, String[] value) throws IOException, GeneralSecurityException, URISyntaxException;
-	
-	public BufferedImage getImage(String path, String[] key, String[] value) throws IOException, GeneralSecurityException, URISyntaxException;
+public class ImageFileServiceImpl implements ImageFileService {
+
+	@Override
+	public void write(BufferedImage img, String type, File file) throws BatchingException {
 		
+		try {
+			ImageIO.write(img, "png", file);
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new BatchingException("Couldn't write image "+file.getPath());
+		}
+
+	}
+
+	@Override
+	public BufferedImage read(File file) throws BatchingException {
+		
+		try {
+			return ImageIO.read(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new BatchingException("Couldn't read image "+file.getPath());
+		}
+	}
+
 }

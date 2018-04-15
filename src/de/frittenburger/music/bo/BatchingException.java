@@ -18,10 +18,19 @@
  * along with MP3-Album-Art.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package de.frittenburger.music.interfaces;
+package de.frittenburger.music.bo;
 
-public interface StringDistance {
+public class BatchingException extends Exception {
 
-	int calculate(CharSequence lhs, CharSequence rhs);                         
+	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public BatchingException(String message) {
+		super(message);
+	}
+	
 }

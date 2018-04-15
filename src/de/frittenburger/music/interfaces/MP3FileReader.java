@@ -20,8 +20,15 @@
  */
 package de.frittenburger.music.interfaces;
 
-public interface StringDistance {
+import java.io.File;
 
-	int calculate(CharSequence lhs, CharSequence rhs);                         
+import de.frittenburger.music.bo.BatchingException;
+import de.frittenburger.music.bo.MP3Info;
 
+public interface MP3FileReader {
+
+	
+	MP3Info readInfo(File file) throws BatchingException;
+	
+	
 }
